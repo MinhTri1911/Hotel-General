@@ -1,0 +1,23 @@
+version: '3'
+services:
+  webserver:
+    build:
+        context: ./
+        dockerfile: web.dockerfile
+    container_name: hotel-server
+    volumes:
+      - ../server-src:/var/www/html
+    ports:
+      - "80:80"
+    links:
+      - dbserver
+  dbserver:
+    image: mysql:5.7
+    container_name: hotel-db
+    environment:
+      - "MYSQL_ROOT_PASSWORD=minht1911"
+      - "MYSQL_DATABASE=hotel"
+    volumes:
+      - ../db/mysql:/var/lib/mysql
+    ports:
+      - "3306:3306"
