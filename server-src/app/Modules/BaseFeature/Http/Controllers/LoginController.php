@@ -58,6 +58,6 @@ class LoginController extends Controller
 
     public function postLogin(Request $request)
     {
-        dd($request->all());
+        // dd($request->all());
     }
 }
