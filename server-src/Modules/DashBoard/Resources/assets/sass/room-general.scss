@@ -1,0 +1,21 @@
+/*
+ * Hanlde css create room
+ */
+.create-room {
+  .block {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 1294px) {
+  .create-room {
+    .block {
+      margin-top: 0px;
+
+      .col-md-12, .col-md-6 {
+        width: 100%;
+        margin: 10px 0px 10px 0px;
+      }
+    }
+  }
+}

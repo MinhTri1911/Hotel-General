@@ -20,6 +20,9 @@ class CreateRoomsTable extends Migration
             $table->string('room_name_default');
             $table->string('room_name')->nullable();
             $table->integer('level')->default(1);
+            $table->integer('status')->default(0);
+            $table->dateTime('stay-from')->nullable();
+            $table->dateTime('stay-to')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
