@@ -5,6 +5,7 @@
 /public/js
 /public/images
 /public/vendor
+/public/dropzone
 /storage/*.key
 /vendor
 /.idea

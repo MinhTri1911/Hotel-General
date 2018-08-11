@@ -9,4 +9,7 @@ Route::group([
     Route::resource('/', 'RoomController', [
         'only' => ['index', 'create', 'store'],
     ]);
+
+    Route::post('/upload-images', 'RoomController@uploadImage')->name('upload.image');
+    Route::post('/remove-images', 'RoomController@removeImage')->name('remove.image');
 });

@@ -12,5 +12,9 @@ let mix = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
+    .babel([
+        './node_modules/select2/dist/js/select2.full.min.js'
+    ], 'public/js/select2.full.min.js')
     .copyDirectory('resources/assets/vendor', 'public/vendor')
+    .copyDirectory('resources/assets/dropzone/dist/min', 'public/dropzone')
     .sass('resources/assets/sass/app.scss', 'public/css');
