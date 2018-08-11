@@ -16,7 +16,9 @@ class CreatePriceRoomsTable extends Migration
         Schema::create('price_rooms', function (Blueprint $table) {
             $table->increments('id');
             $table->double('amount', 10, 2);
-            $table->float('discount', 2, 2);
+            $table->float('discount', 2, 2)->default(0);
+            $table->string('price_from')->default('N/A');
+            $table->integer('price_type')->default(0);
             $table->softDeletes();
             $table->timestamps();
         });
