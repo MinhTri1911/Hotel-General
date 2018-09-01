@@ -1,9 +1,60 @@
+@import "variable";
+@import "./common/custome";
+@import "../../../../../node_modules/select2/dist/css/select2";
+
 /*
  * Hanlde css create room
  */
 .create-room {
+  .require {
+    color: $color-red;
+  }
   .block {
     margin-top: 20px;
+  }
+
+  .group-input {
+    display: flex;
+  }
+
+  .modal {
+    .modal-header {
+      h4 {
+        font-weight: 700;
+      }
+    }
+
+    .modal-title {
+      width: auto;
+    }
+
+    .modal-body {
+      height: 300px;
+    }
+  }
+
+  .page-heading {
+    margin: 20px 0;
+    color: #666;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Segoe UI Light", "Arial", serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  #dropzone-images-room .message {
+      font-family: "Segoe UI Light", "Arial", serif;
+      font-weight: 600;
+      color: #0087F7;
+      font-size: 1.5em;
+      letter-spacing: 0.05em;
+  }
+
+  .dropzone {
+      border: 2px dashed #0087F7;
+      background: white;
+      border-radius: 5px;
+      vertical-align: baseline;
   }
 }
 
@@ -15,6 +66,17 @@
       .col-md-12, .col-md-6 {
         width: 100%;
         margin: 10px 0px 10px 0px;
+      }
+
+      .col-md-12 {
+        .group-input {
+          position: relative;
+          .icon-quick-create {
+            position: absolute;
+            bottom: 17px;
+            right: 48px;
+          }
+        }
       }
     }
   }

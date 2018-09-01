@@ -1,8 +1,9 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
+    "/js/select2.full.min.js": "/js/select2.full.min.js",
     "/js/dashboard.js": "/js/dashboard.js",
-    "/public/css/room-general.css": "/public/css/room-general.css",
+    "/css/room-general.css": "/css/room-general.css",
     "/css/dashboard.css": "/css/dashboard.css",
-    "/css/room-general.css": "/css/room-general.css"
+    "/js/room-general.js": "/js/room-general.js"
 }

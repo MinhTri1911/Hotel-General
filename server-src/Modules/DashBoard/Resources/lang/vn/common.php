@@ -20,6 +20,7 @@ return [
         'price_room' => 'Giá phòng',
         'image' => 'Hình ảnh',
         'description' => 'Ghi chú',
+        'room_level' => 'Tầng',
     ],
 
     'require' => '*',
