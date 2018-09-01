@@ -9,7 +9,14 @@ Route::group([
     Route::resource('/', 'RoomController', [
         'only' => ['index', 'create', 'store'],
     ]);
+});
 
-    Route::post('/upload-images', 'RoomController@uploadImage')->name('upload.image');
-    Route::post('/remove-images', 'RoomController@removeImage')->name('remove.image');
+Route::group([
+    'middleware' => ['web','auth'],
+    'prefix' => 'admin/files',
+    'namespace' => 'Modules\DashBoard\Http\Controllers',
+    'as' => 'admin.file.',
+], function () {
+    Route::post('/upload-images', 'UploadFileController@uploadImage')->name('upload.image');
+    Route::post('/remove-images', 'UploadFileController@removeImage')->name('remove.image');
 });
